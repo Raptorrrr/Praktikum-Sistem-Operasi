@@ -1,27 +1,18 @@
-clear
 
-echo "Masukkan nilai : "
-read nilai
+echo -n "Masukan Satuan Detik = "
+read detik;
 
-if (("$nilai" >= 60));
+if [ $detik -ge 3600 ]
 then
- echo "Anda lulus!"
-else
- echo "Anda tidak lulus"
+    let jam=$detik/3600;
+    let detik=$detik-$jam*3600;
+    echo "$jam jam"
 fi
-
-if (("$nilai" >=0)) && (("$nilai" <=20));
+if [ $detik -ge 60 ]
 then
- echo "Dapet E"
-elif (("$nilai" >=21)) && (("$nilai" <=40));
-then
- echo "Dapet D"
-elif (("$nilai" >=41)) && (("$nilai" <=60));
-then
- echo "Dapet c"
-elif (("$nilai" >=61)) && (("$nilai" <=80));
-then
- echo "Dapet B"
-else
- echo "Dapet A"
+    let menit=$detik/60;
+    let detik=$detik-$menit*60;
+    echo "$menit menit"
 fi
+echo "$detik detik";
+
