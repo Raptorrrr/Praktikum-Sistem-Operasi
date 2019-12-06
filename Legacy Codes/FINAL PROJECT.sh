@@ -28,7 +28,7 @@ function Pemasukan(){
 	echo "      		$input"
 	echo "========================================"
 	
-
+ 	
 	let i=i+1;
 
 }
@@ -72,10 +72,11 @@ function Pengeluaran(){
 		echo "========================================" 
 		let input=$input-${output[$j]}
  		let keluar=keluar+${output[$j]}
+ 		let j=$j+1;
 	elif [[ $a == "n" ]]; then
 		clear
 	fi
-	let j=$j+1;
+	
 
 
 }
@@ -135,7 +136,7 @@ elif [[ $pil -eq 2 ]]; then
 elif [[ $pil -eq 3 ]]; then
 	firefox https://pengusahamuslim.com/3345-menabung-dalam-timbangan-1775.html
 elif [[ $pil -eq 4 ]]; then
-	firefox https://github.com/Raptorrrr/Praktikum-Sistem-Operasi/tree/master/Legacy%20Codes
+	firefox https://github.com/Raptorrrr/Praktikum-Sistem-Operasi
 fi
 
 }
@@ -148,7 +149,7 @@ function note(){
 	echo "============================================================================"	
 
 	nano $note.txt
-	
+
 	clear
 	echo "============================================================================"	
 	echo "Note $note berhasil di buat"
